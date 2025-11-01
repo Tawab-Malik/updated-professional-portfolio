@@ -5,9 +5,11 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  
   // ✅ Keep only ONE server object
    server: {
     port: 3000,
+    
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
@@ -61,8 +63,7 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'esnext',
-    outDir: 'build',
+    outDir: 'dist', // ✅ Vercel expects this
   },
 
 });
