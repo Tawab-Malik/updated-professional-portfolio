@@ -45,7 +45,7 @@ export function CTA() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-8 group"
+          className="inline-flex items-center gap-2 px-6 py-3 !z-20 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-8 group"
         >
           <motion.div
             animate={{ rotate: 360 }}
@@ -63,7 +63,7 @@ export function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-4xl md:!text-6xl !font-bold mb-6"
+          className="text-4xl md:!text-6xl !font-bold mb-6 !z-20"
         >
           <span className="inline-block bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">
             Let's Build Something
@@ -98,7 +98,7 @@ export function CTA() {
           >
             <Button
               size="lg"
-              className="relative bg-gradient-to-r from-primary text-white to-secondary hover:opacity-90 transition-opacity group text-lg px-10 py-8 overflow-hidden"
+              className="relative bg-gradient-to-r from-primary text-white to-secondary !z-20 hover:opacity-90 transition-opacity group text-lg px-10 py-8 overflow-hidden"
               onClick={() =>
                 document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
               }
